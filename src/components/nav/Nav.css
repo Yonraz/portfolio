@@ -1,0 +1,8 @@
+.navbar {
+  background: none;
+  border-radius: 1rem;
+  background-size: 400% 400%;
+  animation: gradient 60s ease infinite;
+  color: white;
+  text-shadow: 1px 1px 1px rgb(52, 38, 38);
+}
