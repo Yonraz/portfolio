@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import TechShowcase from "../techShowcase/TechShowcase";
+import './Hero.css'
 
 const Hero: React.FC = () => {
   return (
@@ -25,7 +26,9 @@ const Hero: React.FC = () => {
         </div>
         <h3 className="text-slate-200 text-lg">My latest projects include:</h3>
         <TechShowcase />
-        <button className="btn my-8">
+        <button
+          className="btn my-8 glass-bg"
+        >
           <Link to={"/portfolio"}>See Portfolio</Link>
         </button>
       </div>

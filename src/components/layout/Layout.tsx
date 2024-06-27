@@ -5,7 +5,7 @@ import FloatingGlass from "../floatingGlass/FloatingGlass";
 const Layout: React.FC = () => {
   return (
     <div className="">
-      <div className=" w-screen h-screen absolute z-[-1] ">
+      <div className=" w-screen box-border h-[1500px] absolute z-[-1] ">
         <FloatingGlass />
       </div>
       <Nav />
