@@ -1,0 +1,11 @@
+.knob-container {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
+
+hr {
+    width: 5em;
+    border: 1px solid #7c7c7c5a;
+    border-radius: 20px;
+}

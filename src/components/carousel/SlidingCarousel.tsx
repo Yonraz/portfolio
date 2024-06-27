@@ -3,6 +3,7 @@ import { useState } from "react";
 import CarouselItems from "./CarouselCards";
 import { CarouselItem } from "./types";
 import { BiChevronLeftCircle, BiChevronRightCircle } from "react-icons/bi";
+import ChevronButton from "../chevron/Chevron";
 
 const DRAG_BUFFER = 50;
 
@@ -13,7 +14,6 @@ interface CarouselProps {
 const SlidingCarousel: React.FC<CarouselProps> = ({ items }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [dragging, setDragging] = useState(false);
-  const [dragStart, setDragStart] = useState(0);
   const getLength = () => {
     if (window.innerWidth < 768) {
       return items.length / 3;
@@ -59,12 +59,8 @@ const SlidingCarousel: React.FC<CarouselProps> = ({ items }) => {
         </motion.div>
       </div>
       <div className="w-1/4 flex justify-between">
-        <button className="chevron" onClick={moveBackward}>
-          <BiChevronLeftCircle size={30}/>
-        </button>
-        <button onClick={moveForward}>
-          <BiChevronRightCircle size={30} />
-        </button>
+        <ChevronButton size={30} direction="left" onClick={moveBackward} />
+        <ChevronButton size={30} direction="right" onClick={moveForward} />
       </div>
     </div>
   );
