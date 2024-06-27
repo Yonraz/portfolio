@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 import "./Nav.css";
 const Nav: React.FC = () => {
   return (
-    <div className="navbar max-w-full">
+    <div className="navbar w-full">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
@@ -25,15 +25,15 @@ const Nav: React.FC = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3  p-2 shadow"
           >
-            <li>
+            <li className="top-0">
               <Link to="/">Homepage</Link>
             </li>
-            <li>
+            <li className="top-0">
               <Link to="/portfolio">Portfolio</Link>
             </li>
-            <li>
+            <li className="top-0">
               <Link to="/contact">Contact</Link>
             </li>
           </ul>

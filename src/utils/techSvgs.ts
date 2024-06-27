@@ -11,6 +11,11 @@ export const svgs = {
   nextjs: "https://icon.icepanel.io/Technology/png-shadow-512/Next.js.png",
   redis: "https://icon.icepanel.io/Technology/svg/Redis.svg",
   aws: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",
+  python: "https://www.svgrepo.com/show/376344/python.svg",
+  angular:
+    "https://impicode.com/wp-content/uploads/sites/2/2020/07/Angular_full_color_logo.svg_-768x768.png",
+  opencv:
+    "https://raw.githubusercontent.com/wiki/opencv/opencv/images/opencv-logo.png",
 };
 export const svgArray = [
   { name: "Typescript", url: svgs.typescript },
@@ -25,4 +30,7 @@ export const svgArray = [
   { name: "Socket.io", url: svgs.socketio },
   { name: "Tailwind CSS", url: svgs.tailwind },
   { name: "AWS", url: svgs.aws },
+  { name: "Python", url: svgs.python },
+  { name: "Angular", url: svgs.angular },
+  { name: "OpenCV", url: svgs.opencv },
 ];

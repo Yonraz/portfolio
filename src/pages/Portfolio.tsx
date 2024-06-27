@@ -1,49 +1,6 @@
 import PageContent from "../components/PageContent/PageContent";
 import Project from "../components/ProjectDetails/Project";
-import TechShowcase from "../components/techShowcase/TechShowcase";
-import { svgs } from "../utils/techSvgs";
-
-const oscillation = {
-  title: "Oscillation",
-  url: "https://github.com/Yonraz/Oscillation-Vinyl-Shop",
-  gallery: [
-    "https://github.com/Yonraz/Oscillation-Vinyl-Shop/assets/99009434/b07c3e3c-3e6a-45c4-bcde-2b66ad8693c6",
-    "https://github.com/Yonraz/Oscillation-Vinyl-Shop/assets/99009434/2991640c-5fcc-4e6a-877c-64e44caf25c8",
-    "https://github.com/Yonraz/Oscillation-Vinyl-Shop/assets/99009434/27f5984b-6a45-447c-8162-040a2c76a3e5",
-  ],
-  tech: [
-    { name: "Typescript", url: svgs.typescript },
-    { name: "React", url: svgs.react },
-    { name: "Node.js", url: svgs.node },
-    { name: "MongoDB", url: svgs.mongo },
-    { name: "Kubernetes", url: svgs.kubernetes },
-    { name: "Docker", url: svgs.docker },
-    { name: "Apache Kafka", url: svgs.kafka },
-    { name: "Redis", url: svgs.redis },
-    { name: "Next.js", url: svgs.nextjs },
-    { name: "AWS", url: svgs.aws },
-    { name: "Tailwind CSS", url: svgs.tailwind },
-  ],
-};
-
-const backgammon = {
-  title: "Backgammon",
-  url: "https://github.com/almoghindi/Backgammon",
-  gallery: [
-    "https://github.com/almoghindi/Backgammon/assets/99009434/be074df4-91c7-403e-a5be-b1e2c42df6b8",
-    "https://github.com/almoghindi/Backgammon/assets/99009434/5a33170a-9d63-409f-b001-fac01f15ed92",
-    "https://github.com/almoghindi/Backgammon/assets/99009434/d036692f-3cd4-4778-bc0a-2bd935955d5d",
-  ],
-  tech: [
-    { name: "Typescript", url: svgs.typescript },
-    { name: "React", url: svgs.react },
-    { name: "Node.js", url: svgs.node },
-    { name: "MongoDB", url: svgs.mongo },
-    { name: "Docker", url: svgs.docker },
-    { name: "Redis", url: svgs.redis },
-    { name: "Socket.io", url: svgs.socketio },
-  ],
-};
+import { backgammon, oscillation, paint, sudoku } from "./content/projectsData";
 
 const Portfolio: React.FC = () => {
   return (
@@ -78,15 +35,78 @@ const Portfolio: React.FC = () => {
       >
         <PageContent>
           <p>
-            A multiplayer backgammon game complete with real time chat and notifications.
-            <br /> Users can invite others to games, play and chat with other users, and keep their score. <br />
-            This project was created as a school project, in a tight time frame of about two week. I designed and built it in co-operation
-            with a classmate. 
-             <br />
-             I designed and implemented the chat and game features, and some of the authentication features. 
-             I was responsible for both the frontend and backend aspects of these features and completed them while co-operating with my teammate. 
+            A multiplayer backgammon game complete with real time chat and
+            notifications.
+            <br /> Users can invite others to games, play and chat with other
+            users, and keep their score. <br />
+            This project was created as a school project, in a tight time frame
+            of about two week. I designed and built it in co-operation with a
+            classmate.
             <br />
-            I enjoyed this project a lot, creating such a game required some critical descision making on the design part, especially on the backend.
+            I designed and implemented the chat and game features, and some of
+            the authentication features. I was responsible for both the frontend
+            and backend aspects of these features and completed them while
+            co-operating with my teammate.
+            <br />I enjoyed this project a lot, creating such a game required
+            some critical descision making on the design part, especially on the
+            backend.
+          </p>
+        </PageContent>
+      </Project>
+      <Project
+        gallery={sudoku.gallery}
+        repoUrl={sudoku.url}
+        title={sudoku.title}
+        techStack={sudoku.tech}
+      >
+        <PageContent>
+          <p>
+            A sudoku solver that enables image processing and{" "}
+            <strong>OCR</strong> (optical character recognition) through openCV
+            processing and a <strong>Tensorflow</strong> Machine Learning model.
+            <br /> I've been obsessed with the Sudoku solving algorithm from the
+            first moment I started learning algorithms. The first time I
+            implemented it was without much algorithmic knowledge, not even
+            recursion. It was super challenging but also super fun. The first
+            time it worked felt like magic. <br />
+            This project expands on my love for this algorithm, I wanted to
+            learn some image processing fundamentals and started researching.
+            <br />
+            The image processing learning process was super intersting and for
+            me this project is just scratching the surface, but still very cool.
+            After that I began learning about OCR and how to implement it with
+            Tensorflow, which is a whole other subject to get into.
+            <br />
+            The link is to the client repo, it has a link to get to the server
+            repo where the cool stuff are.
+          </p>
+        </PageContent>
+      </Project>
+      <Project
+        gallery={paint.gallery}
+        repoUrl={paint.url}
+        title={paint.title}
+        techStack={paint.tech}
+      >
+        <PageContent>
+          <p>
+            A small fun app for simply painting using the Canvas API.
+            <br /> This app started as a challenge that I got from a friend,
+            originally meant to just have the basic functionality of drawing and
+            erasing, but I just had to expand it. <br />
+            I learned how to implement my own flood fill algorithm, which is a
+            bit more complicated than the general approach - since canvas
+            implements a smoothing effect under the hood and not all stroke
+            values are the same I had to implement some sort of differentiation
+            strategy to make sure I'm not missing any smoothed out pixels.
+            <br />
+            My approach was to calculate the euclidean distance between the
+            starting color and the current color, so I can know whether I hit a
+            real border, or just a 'smooth' pixle I need to fill. It's still not
+            perfect, but I'm working on it from time to time.
+            <br />
+            Web sockets have also been introduced, for the event that I'd want
+            to turn this into a game someday, but It's still far from that.
           </p>
         </PageContent>
       </Project>
