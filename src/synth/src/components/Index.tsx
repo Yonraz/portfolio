@@ -1,6 +1,9 @@
+//@ts-expect-error importing a jsx component
 import Synth from "../features/synth/index";
 import "./index.css";
+//@ts-expect-error importing a jsx component
 import useAudioLogic from "./audioHandler/useAudioLogic";
+//@ts-expect-error importing a jsx component
 import useADSR from "../hooks/useADSR";
 import { useState } from "react";
 
@@ -9,10 +12,7 @@ import { useState } from "react";
  * @returns {JSX.Element}
  */
 const Main = () => {
-  const {
-    adsrParams: ampEnv,
-  } = useADSR();
-
+  const { adsrParams: ampEnv } = useADSR();
 
   const [volumeAmount, setVolumeAmount] = useState(0.1);
 

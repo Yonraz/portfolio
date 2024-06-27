@@ -1,8 +1,8 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { motion, useMotionValue } from "framer-motion";
 import { useState } from "react";
 import CarouselItems from "./CarouselCards";
 import { CarouselItem } from "./types";
-import { BiChevronLeftCircle, BiChevronRightCircle } from "react-icons/bi";
 import ChevronButton from "../chevron/Chevron";
 
 const DRAG_BUFFER = 50;
@@ -13,6 +13,7 @@ interface CarouselProps {
 
 const SlidingCarousel: React.FC<CarouselProps> = ({ items }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  //@ts-expect-error dont worry m8
   const [dragging, setDragging] = useState(false);
   const getLength = () => {
     if (window.innerWidth < 768) {

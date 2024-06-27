@@ -4,10 +4,7 @@ interface GalleryProps {
 }
 
 const GalleryCarousel: React.FC<GalleryProps> = ({ slides, id }) => {
-  const keepLocation = (
-    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
-    oldOffset: number
-  ) => {
+  const keepLocation = (oldOffset: number) => {
     console.log(oldOffset);
     if (oldOffset) {
       window.scroll(0, oldOffset);
@@ -25,14 +22,14 @@ const GalleryCarousel: React.FC<GalleryProps> = ({ slides, id }) => {
           <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
             <a
               href={`#slide${id}${(i - 1 + slides.length) % slides.length}`}
-              onClick={(e) => keepLocation(e, window.scrollY)}
+              onClick={() => keepLocation(window.scrollY)}
               className=" btn glass-bg"
             >
               ❮
             </a>
             <a
               href={`#slide${id}${(i + 1) % slides.length}`}
-              onClick={(e) => keepLocation(e, window.scrollY)}
+              onClick={() => keepLocation(window.scrollY)}
               className="btn glass-bg"
             >
               ❯
