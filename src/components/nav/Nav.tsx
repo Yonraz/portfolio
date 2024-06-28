@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import { MdImportContacts } from "react-icons/md";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "./Nav.css";
 const Nav: React.FC = () => {
   return (
@@ -51,9 +50,9 @@ const Nav: React.FC = () => {
           </a>
         </button>
         <button className="btn btn-ghost btn-circle">
-          <Link to="/contact">
-            <MdImportContacts />
-          </Link>
+          <a href="https://www.linkedin.com/in/yonatan-raz/" target="_blank">
+            <FaLinkedin />
+          </a>
         </button>
       </div>
     </div>
