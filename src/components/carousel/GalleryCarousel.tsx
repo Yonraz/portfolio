@@ -18,7 +18,7 @@ const GalleryCarousel: React.FC<GalleryProps> = ({ slides, id }) => {
           className="carousel-item relative w-full"
         >
           <img src={url} className="w-full  rounded-lg object-contain" />
-          <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between opacity-0">
             <a
               href={`#slide${id}${(i - 1 + slides.length) % slides.length}`}
               onClick={() => keepLocation(window.scrollY)}

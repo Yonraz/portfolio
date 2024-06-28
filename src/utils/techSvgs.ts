@@ -34,3 +34,5 @@ export const svgArray = [
   { name: "Angular", url: svgs.angular },
   { name: "OpenCV", url: svgs.opencv },
 ];
+
+export const latestTechnologies = svgArray.slice(0, 12)
