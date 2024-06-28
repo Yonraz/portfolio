@@ -23,10 +23,10 @@ const Project: React.FC<ProjectProps> = ({
   techStack,
 }) => {
   return (
-    <div className="hero mx-6 bg-none ">
+    <div className="hero bg-none ">
       <div className="lg:max-w-5xl md:max-w-3xl sm:max-w-xl max-w-[22rem] flex flex-col items-center">
         <div className="hero-content px-0 flex-col lg:flex-row-reverse">
-          <div className="max-w-xl max-h-sm shadow-2xl">
+          <div className="sm:max-w-xl max-w-sm  max-h-sm shadow-2xl">
             <Suspense fallback={<div className="skeleton w-full h-full"></div>}>
               <GalleryCarousel slides={gallery} id={title} />
             </Suspense>

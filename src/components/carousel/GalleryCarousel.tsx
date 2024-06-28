@@ -5,7 +5,6 @@ interface GalleryProps {
 
 const GalleryCarousel: React.FC<GalleryProps> = ({ slides, id }) => {
   const keepLocation = (oldOffset: number) => {
-    console.log(oldOffset);
     if (oldOffset) {
       window.scroll(0, oldOffset);
     } else window.scroll(0, 0);
