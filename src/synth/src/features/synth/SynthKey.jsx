@@ -13,6 +13,7 @@ const SynthKey = (props) => {
         onTouchStart={props.handleMouseDown}
         onTouchEnd={props.handleMouseUp}
         onTouchCancel={props.handleMouseUp}
+        onMouseLeave={props.handleMouseUp}
         id={props.id}
         className={
           props.isPressed ? `key-pressed ${className}` : `${className}`
