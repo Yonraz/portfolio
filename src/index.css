@@ -5,7 +5,6 @@
 #root {
   padding: none;
   margin: none;
-  background-color: #0C2D48;
 }
 
 @media (prefers-color-scheme: dark) {
