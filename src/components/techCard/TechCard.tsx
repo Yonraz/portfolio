@@ -10,7 +10,7 @@ const TechCard: React.FC<TechCardProps> = ({ name, url }) => {
         <img draggable={false} src={url} alt={`${name} icon`} />
       </figure>
       <div className="card-body flex w-fit justify-center">
-        <p className="card-title text-slate-100 text-center w-fit">{name}</p>
+        <p className="card-title text-center w-fit">{name}</p>
       </div>
     </div>
   );
