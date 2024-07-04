@@ -9,7 +9,7 @@ const Hero: React.FC = () => {
         <div className="hero-content px-0 flex-col lg:flex-row-reverse">
           <img
             src="https://oscillation-project.s3.eu-north-1.amazonaws.com/images/WhatsApp+Image+2024-06-30+at+22.02.29_ed205fcd.jpg"
-            className="max-w-sm rounded-lg shadow-2xl"
+            className="max-w-sm max-h-72 rounded-lg shadow-2xl"
           />
           <div className="py-6">
             <h1 className="text-5xl font-bold">Hello!</h1>
