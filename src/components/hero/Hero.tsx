@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import TechShowcase from "../techShowcase/TechShowcase";
-import './Hero.css'
+import "./Hero.css";
 
 const Hero: React.FC = () => {
   return (
@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
       <div className="lg:max-w-5xl md:max-w-3xl sm:max-w-xl max-w-[22rem] flex flex-col items-center">
         <div className="hero-content px-0 flex-col lg:flex-row-reverse">
           <img
-            src="https://oscillation-project.s3.eu-north-1.amazonaws.com/images/PXL_20240513_103741256.MP.jpg"
+            src="https://oscillation-project.s3.eu-north-1.amazonaws.com/images/WhatsApp+Image+2024-06-30+at+22.02.29_ed205fcd.jpg"
             className="max-w-sm rounded-lg shadow-2xl"
           />
           <div className="py-6">
@@ -26,9 +26,7 @@ const Hero: React.FC = () => {
         </div>
         <h3 className="text-slate-200 text-lg">My latest projects include:</h3>
         <TechShowcase />
-        <button
-          className="btn my-8 glass-bg"
-        >
+        <button className="btn my-8 glass-bg">
           <Link to={"/portfolio"}>See Portfolio</Link>
         </button>
       </div>
